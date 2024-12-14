@@ -471,15 +471,19 @@ h5 {
   font-size: 1.5rem;
 }
 
-.midterms-section {
+
+
+/* MIDTERMS PAGE */
+.midterms-section, .contact-section {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 1200px;
+  height: auto;
   margin: 0 auto;
 }
 
-.midterms-content {
+.midterms-content{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -518,7 +522,7 @@ h5 {
 }
 
 
-FINALS PAGE
+/* FINALS PAGE */
 .finals-section {
   width: 100vw;
   height: 100vh;
@@ -529,8 +533,16 @@ FINALS PAGE
 
 
 /* CONTACT PAGE */
+.contact-section {
+  height: 80vh;
+  margin: 60px auto;
+  padding: 100px;
+  flex-direction: column;
+  text-align: center;
+}
+
 .contact-section form {
-  width: 50%;
+  width: 25%;
   margin: 0 auto;
   background: #fff;
   padding: 20px;
@@ -542,9 +554,36 @@ FINALS PAGE
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
+  text-align: left;
+  padding: 0 20px
 }
 
+.contact-section input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
 
+.contact-section input[type="submit"] {
+  background-color: #163172;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.contact-section input[type="submit"]:hover {
+  background-color: #0b2050;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 20px;
+}
 
 
 /* MEDIA QUERIES */
@@ -842,4 +881,11 @@ FINALS PAGE
   .main h3 {
     font-size: 1rem;
   }
+
+  .midterms-section, .contact-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: auto;
+  }
+
 }
